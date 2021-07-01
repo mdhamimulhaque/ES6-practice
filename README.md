@@ -1,1 +1,1 @@
-# ES6-practice
+# JS-practice
