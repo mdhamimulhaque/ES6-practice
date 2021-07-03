@@ -2,7 +2,7 @@ const myObject = {
     firstName :"Hamim",
     lastName: "Himel",
     age : 21,
-    sealery: 20000,
+    salary: 20000,
 
     getFullName:function(){
         console.log(this.firstName, this.lastName)
@@ -20,17 +20,17 @@ const schoolDocument ={
     lastName: "Tamal",
     salary : 30000
 }
-const familyDocu ={
+const familyDocument ={
     FirstName: "Muslima",
     lastName: "Khatun",
     salary : 20000,
 }
 
 //-----billCharge work with familyDocu because of Bind &----> Bind return a function
-const applyBind = myObject.billCharge.bind(familyDocu);
+const applyBind = myObject.billCharge.bind(familyDocument);
 applyBind(3000);
 applyBind(5000);
-console.log(familyDocu.salary);
+console.log(familyDocument.salary);
 
 
 
