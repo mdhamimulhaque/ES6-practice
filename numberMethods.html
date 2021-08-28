@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number methods</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+	<script>
+    // <<<===============convert Number to String ====================>>>
+    var himel = 20;
+    himel = toString(himel);
+    console.log(typeof(himel));
+
+    // <<<===============convert String to Number(Float & Integer) ====================>>>
+
+    var tamal = "20.55";
+    tamal = (parseFloat(tamal));
+    console.log(typeof(tamal));
+
+    console.log(typeof(parseInt(tamal))); //<<<==========(Integer)=======>>>
+        
+    // <<<=============== Fixed Digits (toFixed & toPrecision) ====================>>>
+    var ragib = 2.5378;
+    console.log(ragib.toFixed(3));  //<<<======== After Decimal ========>>>
+    console.log(ragib.toPrecision(3)); //<<<======== Total Number With Decimal ========>>>
+
+    // <<<=============== convert String to Number ====================>>>
+    var shad = "20.485";
+    shad = (Number("20.485"));
+    console.log(typeof(shad));
+
+    console.log(typeof(Number("20.34364")));
+
+
+	</script>
+    
+</body>
+</html>
