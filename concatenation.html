@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Print Style</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <p id="result"></p>
+    <p id="result1"></p>
+    <p id="result3"></p>
+    <p id="resulr4"></p>
+
+	<script>
+     // <<<================ string concatenation ( concatenation ) =================>>>
+
+      var firstName = " Md Hamimul";
+      var lastName = " Haque";
+
+      // document.write(firstName + lastName);        //--------- (1)-------
+      document.write("My name is" + firstName + lastName + "<br>"); //-----------(2)--------
+
+
+      var text1 = "Tamal";
+      var text2 = "is my younger brother." + "<br>";
+      var text = text1.concat(text2); //-------------(3)-----------
+      document.write(text);
+
+
+
+
+    // library function for string
+
+
+      var text = "Md Hamimul Haque";
+      // document.write( text.length);  //------------Display length ---------------
+      var num = text.length;
+      document.write(num + "<br>");
+    
+      //------------Get value from Input & Display length---------------
+      var userInput = prompt("Input your Name :"); 
+      document.write("Number of character is : " +  userInput.length);
+
+
+
+
+  
+
+
+         
+	</script>
+    
+</body>
+</html>
