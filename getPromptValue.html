@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Prompt Value</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+	<script>
+       var text = prompt("input your 1st number : ");
+       var text1 = prompt("input your 1st number : ");
+    
+       // when collected value from prompt ,that's mean this is String && if i want to use this value as a number,i must have to convert this value with NUMBER Method
+       
+       text = parseInt(text,10);  //-----------(10 = Base Number )---------
+       text1 = parseInt(text1,10);
+
+       var sum,sub;
+        sum = text + text1;
+        sub = text - text1;
+
+        document.write("Addition = " + sum + "<br>");
+        document.write("Subtruction = " + sub);
+
+
+
+    // <<<================= Get Prompt Value & Calculation(Addition, Subtraction, Multipication, Division, Modulus)==============>>>
+
+        // var firstNum = prompt("Enter your first number : ");
+        // var secondNum = prompt("Enter your second number : ");
+
+        // firstNum = parseInt(firstNum,10); //-----------(10 = Base Number )---------
+        // secondNum = parseInt(secondNum,10);
+
+        // var num,num1,num2,num3,num4;
+
+        // num = firstNum + secondNum;
+        // document.write("Your first result is : " + firstNum + "+" + secondNum + " = " + num + "<br>");
+
+        // num1 = firstNum - secondNum;
+        // document.write("Your second result is : " + firstNum + "-" + secondNum + " = " + num1 + "<br>");
+
+        // num2 = firstNum * secondNum;
+        // document.write("Your third result is : " + firstNum + "*" + secondNum + " = " + num2 + "<br>");
+
+        // num3 = firstNum / secondNum;
+        // document.write("Your forth result is : " + firstNum + "/" + secondNum + " = " + num3 + "<br>");
+
+        // num4 = firstNum % secondNum;
+        // document.write("Your fifth result is : " + firstNum + "%" + secondNum + " = " + num4 + "<br>");
+
+        
+
+	</script>
+    
+</body>
+</html>
