@@ -18,6 +18,7 @@ task3();
 // ========== asynchronous ==========
 
 // setTimeout() --------- is a asynchronous function. 
+// when use any event it is also maintain asynchronous 
 // we use asynchronous for giving some time to our task . so that, our another task can continue their task and load our asynchronous task
 
 const task4 = () => {
