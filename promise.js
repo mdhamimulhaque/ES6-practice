@@ -70,3 +70,38 @@ Promise.race([myPromise3, myPromise4])
     .then((res) => {
         console.log(res)
     })
+
+// ============= promise chaining for promise handling ==========
+//------------ catch use only one time in promise chain. when it will get a rejection that time it will stop and not to continue another promise
+
+const myPromise5 = () => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(`this is promise five`)
+        }, 7000)
+    })
+}
+const myPromise6 = () => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            reject(`promise six which is not working`)
+        }, 5000)
+    })
+}
+const myPromise7 = () => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(`this is promise seven`)
+        }, 6000)
+    })
+}
+
+myPromise5()
+    .then((res) => { console.log(res) })
+    .then(myPromise6)
+    .then((res) => { console.log(res) })
+    .then(myPromise7)
+    .then((res) => { console.log(res) })
+    .catch((err) => {
+        console.log(err)
+    })
