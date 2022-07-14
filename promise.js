@@ -7,7 +7,7 @@ const myPromise = new Promise((resolve, reject) => {
     if (promiseComplete) {
         resolve(`yes, promise completed successfully`);
     } else {
-        reject(`sorry, promise doesn't complete yet`)
+        reject(new Error(`sorry, promise doesn't complete yet`))
     }
 });
 
