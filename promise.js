@@ -95,7 +95,7 @@ const myPromise7 = () => {
         }, 6000)
     })
 }
-
+//-------- promise chain
 myPromise5()
     .then((res) => { console.log(res) })
     .then(myPromise6)

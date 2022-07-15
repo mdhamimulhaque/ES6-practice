@@ -53,4 +53,4 @@ const object2 = {
 }
 
 const object ={...object1,...object2};
-console.log(object)
+console.log(object);
