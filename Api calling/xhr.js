@@ -4,9 +4,9 @@
 // 2) property : response, responseText, responseURL, status, statusText
 // 3) function : open(), send(), sentRequestHeader()
 
-const getData = () => {
+const makeRequest = (method, url) => {
     const xhr = new XMLHttpRequest();
-    xhr.open(`GET`, `https://jsonplaceholder.typicode.com/posts`);
+    xhr.open(`${method}`, `${url}`);
     xhr.onload = () => {
         let data = xhr.response; //---->load data JSON formate
         let myData = JSON.parse(data) //--------> convert JSON to object
@@ -21,6 +21,11 @@ const getData = () => {
 
 
     xhr.send(xhr);
+}
+
+// --------> we can pass different different URl with this get method 
+const getData = () => {
+    makeRequest(`GET`, `https://jsonplaceholder.typicode.com/posts`)
 }
 
 getData()
