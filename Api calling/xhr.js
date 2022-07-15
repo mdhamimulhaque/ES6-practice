@@ -13,6 +13,7 @@ const makeRequest = (method, url, sendData) => {
     xhr.onload = () => {
         let data = xhr.response; //---->load data JSON formate
         let myData = JSON.parse(data) //--------> convert JSON to object
+        // console.log(`check responseURL: ${xhr.responseURL} | status: ${xhr.status} `) //--------> check
         console.log(myData)
     }
 
@@ -31,9 +32,9 @@ const getData = () => {
     makeRequest(`GET`, `https://jsonplaceholder.typicode.com/posts`)
 }
 
-// getData() //---------> data-load(get data)
+getData() //---------> data-load(get data)
 
-//============ for post data =====
+//============ for post data ==========
 const postData = () => {
     makeRequest(`POST`, `https://jsonplaceholder.typicode.com/posts`, {
         title: 'Md Hamimul',
@@ -43,3 +44,34 @@ const postData = () => {
 }
 
 postData()
+
+
+//============ for update data ========
+//---------> for update use (PUT) & update only a single value (PATCH & only value which i want to change)
+const updateData = () => {
+    makeRequest(`PUT`, `https://jsonplaceholder.typicode.com/posts/1`, {
+        id: 1,
+        title: 'Md Rafaetul',
+        body: 'Haque',
+        userId: 1,
+    })
+}
+
+updateData()
+
+//-------------> single data update
+
+const updateSingleData = () => {
+    makeRequest(`PATCH`, `https://jsonplaceholder.typicode.com/posts/1`, {
+        title: 'Md HHH',
+    })
+}
+
+updateSingleData()
+
+//================== delete-Data ==================
+const deleteData = () => {
+    makeRequest(`DELETE`, `https://jsonplaceholder.typicode.com/posts/1`)
+}
+
+deleteData()
