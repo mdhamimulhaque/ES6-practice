@@ -18,6 +18,11 @@ const allValues = Object.values(studentInfo);
 //console.log(allValues);
 
 //========> access all entries (Entries return an array and inside this array it will return another array. (This another array number depends how many keys-value hare)
+// // [
+//     [],
+//     [],
+//     []
+// ]
 const allEntries = Object.entries(studentInfo);
 //console.log(allEntries);
 
@@ -33,7 +38,11 @@ const allEntries = Object.entries(studentInfo);
 //     console.log(key)
 // }
 
-for (let [k, v] of Object.entries(studentInfo)) {   //-------------> array destructuring for access value
+//============== > array destructuring for access value
+// let arr = [10,20];
+// let [a,b] = arr;
+// console.log(a,b)
+for (let [k, v] of Object.entries(studentInfo)) {   //---------> works likes array destructuring
     console.log(`this is key: ${k} ||| This is value: ${v}`)
 }
 
