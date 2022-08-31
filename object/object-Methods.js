@@ -78,3 +78,26 @@ Object.assign(bio, newObj);
 console.log(bio)
 
 
+// ==================> object keys/property delete <===========================
+
+const objDelete = {
+    name: 'himel',
+    age: 21
+}
+console.log(objDelete)
+
+delete objDelete.name;  //-----------> delete object property
+console.log(objDelete)
+
+// ===============> object seal <===========
+const objSeal = {
+    district: 'Narail',
+    area: 2000
+}
+//------> when we use (object seal) method we can't delete & add any property or value but we can update the value
+//------> when we use (object freeze) method we can't delete, update or add any property 
+Object.seal(objSeal) //---------> object seal
+delete objSeal.area //----> it is not work
+objSeal.area = 5000;//--->update
+console.log(objSeal)
+
