@@ -1,9 +1,9 @@
-function myFunction(){
+function myFunction() {
   let count = 0;
-    return function(){
-        count++;
-        return count;
-    }
+  return function () {
+    count++;
+    return count;
+  }
 }
 
 const result = myFunction();
@@ -17,6 +17,13 @@ console.log(result2());
 console.log(result());
 console.log(result2());//--------------
 console.log(result2());
+
+// ---------------->
+
+
+const closure = () => {
+
+}
 
 
 
