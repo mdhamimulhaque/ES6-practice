@@ -53,15 +53,50 @@ const task6 = () => {
 }
 
 
-task1(() => {
-    task2(() => {
-        task3(() => {
-            task4(() => {
-                task5(() => {
-                    task6()
-                })
-            })
-        })
-    });
-})
+// task1(() => {
+//     task2(() => {
+//         task3(() => {
+//             task4(() => {
+//                 task5(() => {
+//                     task6()
+//                 })
+//             })
+//         })
+//     });
+// })
 
+
+
+
+// ==============================================================================
+// ============================= call back function =============================
+// ==============================================================================
+
+const higherOrderFunction = (callBackFunction, name) => {
+    callBackFunction(name) //-------> callback function call
+}
+
+
+
+// ---> function 1
+const morning = (name) => {
+    console.log("Good Morning", name)
+}
+// ---> function 1
+const evening = (name) => {
+    console.log("Good Evening", name)
+}
+// ---> function 1
+const night = (name) => {
+    console.log("Good Night", name)
+}
+
+
+higherOrderFunction(morning, "Himel")
+higherOrderFunction(morning, "Tamal")
+higherOrderFunction(evening, "Tamal")
+higherOrderFunction(night, "Tamal")
+
+
+
+// !====== we use use document.get......addEventListener(click,()=>{})  ---> here anonyms function is also call-back function
