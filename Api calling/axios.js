@@ -48,7 +48,24 @@
 
 // ---> axios delete method
 // ======================
-axios
-    .delete('https://jsonplaceholder.typicode.com/posts/1')
-    .then((res) => console.log(res.data))
-    .catch((err) => console.log(err))
+// axios
+//     .delete('https://jsonplaceholder.typicode.com/posts/1')
+//     .then((res) => console.log(res.data))
+//     .catch((err) => console.log(err))
+
+
+
+// ---> axios with async await <---
+// ================================
+
+const makeRequest = async (config) => {
+    return await axios(config)
+}
+
+// ---> ( get data )
+const getData = () => {
+    makeRequest('https://jsonplaceholder.typicode.com/posts')
+        .then((res) => console.log(res))
+        .catch((err) => console.log(err))
+}
+getData()
