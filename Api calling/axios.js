@@ -62,7 +62,8 @@ const makeRequest = async (config) => {
     return await axios(config)
 }
 
-// ---> ( get data )
+// ---> ( get data || read data )
+// ----------------------------->
 // const getData = () => {
 //     makeRequest('https://jsonplaceholder.typicode.com/posts')
 //         .then((res) => console.log(res))
@@ -71,19 +72,53 @@ const makeRequest = async (config) => {
 // getData()
 
 
-// ---> ( post data )
-const postData = () => {
+// ---> ( post data || create data )
+// -------------------------------->
+// const postData = () => {
+//     makeRequest({
+//         url: "https://jsonplaceholder.typicode.com/posts",
+//         method: "post",
+//         data: JSON.stringify({
+//             id: 1,
+//             title: 'Md Hamimul',
+//             body: 'He is a programmer',
+//             userId: 1,
+//         })
+//     })
+//         .then((res) => console.log(res))
+//         .catch((err) => console.log(err))
+// }
+// postData()
+
+
+// ---> ( put data || update data)
+// ------------------------------->
+// const putData = () => {
+//     makeRequest({
+//         url: "https://jsonplaceholder.typicode.com/posts/1",
+//         method: "put",
+//         data: JSON.stringify({
+//             id: 1,
+//             title: 'Tamal',
+//             body: 'He is a writer',
+//             userId: 1,
+//         })
+//     })
+//         .then((res) => console.log(res.data))
+//         .catch((err) => console.log(err))
+// }
+// putData()
+
+
+
+// ---> ( delete data)
+// ------------------------------->
+const deleteData = () => {
     makeRequest({
-        url: "https://jsonplaceholder.typicode.com/posts",
-        method: "post",
-        data: JSON.stringify({
-            id: 1,
-            title: 'Md Hamimul',
-            body: 'He is a programmer',
-            userId: 1,
-        })
+        url: "https://jsonplaceholder.typicode.com/posts/1",
+        method: "delete",
     })
-        .then((res) => console.log(res))
+        .then((res) => console.log(res.data))
         .catch((err) => console.log(err))
-}
-postData()
+};
+deleteData()
