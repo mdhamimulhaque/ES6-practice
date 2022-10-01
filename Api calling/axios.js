@@ -35,13 +35,20 @@
 
 // ---> axios patch method
 // ======================
+// axios
+//     .patch('https://jsonplaceholder.typicode.com/posts/1', {
+//         body: JSON.stringify({
+//             title: 'Md Rafaetul',
+//             body: 'He is a kind man',
+//             userId: 1,
+//         }),
+//     })
+//     .then((res) => console.log(res.data))
+//     .catch((err) => console.log(err))
+
+// ---> axios delete method
+// ======================
 axios
-    .patch('https://jsonplaceholder.typicode.com/posts/1', {
-        body: JSON.stringify({
-            title: 'Md Rafaetul',
-            body: 'He is a kind man',
-            userId: 1,
-        }),
-    })
+    .delete('https://jsonplaceholder.typicode.com/posts/1')
     .then((res) => console.log(res.data))
     .catch((err) => console.log(err))
