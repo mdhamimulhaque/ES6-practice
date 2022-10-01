@@ -63,9 +63,27 @@ const makeRequest = async (config) => {
 }
 
 // ---> ( get data )
-const getData = () => {
-    makeRequest('https://jsonplaceholder.typicode.com/posts')
+// const getData = () => {
+//     makeRequest('https://jsonplaceholder.typicode.com/posts')
+//         .then((res) => console.log(res))
+//         .catch((err) => console.log(err))
+// }
+// getData()
+
+
+// ---> ( post data )
+const postData = () => {
+    makeRequest({
+        url: "https://jsonplaceholder.typicode.com/posts",
+        method: "post",
+        data: JSON.stringify({
+            id: 1,
+            title: 'Md Hamimul',
+            body: 'He is a programmer',
+            userId: 1,
+        })
+    })
         .then((res) => console.log(res))
         .catch((err) => console.log(err))
 }
-getData()
+postData()
